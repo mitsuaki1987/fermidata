@@ -1,10 +1,8 @@
 <?php
-  $fp = fopen($_GET['fermi'], 'r');
-  while ($row = fgetcsv($fp)) {
-    $rows[] = $row;
-  }
-  fclose($fp);
+  $name = $_GET['name'];
+  $obj = json_decode( file_get_contents("data.json"), TRUE )[$name];
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -25,7 +23,7 @@ Info = {
 	width: 600,
 	height: 600,
 	debug: false,
-	j2sPath: "../j2s",
+	j2sPath: "./j2s",
 	color: "0xC0C0C0",
   disableJ2SLoadMonitor: true,
   disableInitialConsole: true,
@@ -33,7 +31,7 @@ Info = {
 	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
 	readyFunction: null,
-    script: "load <?=$_GET['structure']?> {3,3,3}; set perspectiveDepth ON; select;set defaultLabelXYZ \"%e\"; set labelToggle; set labelAtom; set labelOffset 0 0; color labels black"
+    script: "load https://s3ds.mdx.jp/fermidata/structure/<?=$name?>.xsf {3,3,3}; set perspectiveDepth ON; select;set defaultLabelXYZ \"%e\"; set labelToggle; set labelAtom; set labelOffset 0 0; color labels black"
 }
 
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
@@ -56,21 +54,22 @@ gnuplot.grid_lines = true;
 gnuplot.zoomed = false;
 gnuplot.active_plot_name = "gnuplot_canvas";
     </script>
-    <script src=<?=$_GET['band']?>></script>
+    <script src="https://s3ds.mdx.jp/fermidata/band/<?=$name?>.js"></script>
     <link type="text/css" href="./gnuplot/gnuplot_mouse.css" rel="stylesheet">
 	<!-- gnuplot head end -->
   </head>
   <body bgcolor="CCFFCC" onload="gnuplot_canvas(); gnuplot.init();" oncontextmenu="return false;">
-	<h1><?=$_GET['name']?></h1>
+
+	<h1><?=$name?></h1>
     
 	<h2>Crystal structure</h2>
 	<span id=mydiv></span>
 
   <h2>Properties</h2>
 
-  <p>Formation energy : <?=$_GET['eform']?> eV/atom</p>
-  <p>Magnetization : <?=$_GET['magt']?> &mu;<sub>B</sub>/atom</p>
-  <p>DOS at E<sub>F</sub> : <?=$_GET['dosf']?> /eV/atom (both spin)</p>
+  <p>Formation energy : <?=$obj['eform']?> eV/atom</p>
+  <p>Magnetization : <?=$obj['magt']?> &mu;<sub>B</sub>/atom</p>
+  <p>DOS at E<sub>F</sub> : <?=$obj['dosf']?> /eV/atom (both spin)</p>
 
 	<h2>Band structure</h2>
     <div class="gnuplot">
@@ -139,15 +138,21 @@ gnuplot.active_plot_name = "gnuplot_canvas";
       </table>
     </div>
     <h2>Fermi surface and PDOS (/eV/atom both spin)</h2>
-	<?php if (!empty($rows)): ?>
-      <ul>
-        <?php foreach ($rows as $row): ?>
-          <li><a href="https://fermisurfer.osdn.jp/js/index.php?frmsf=http://localhost/fermi/<?=$row[4]?>" target="_blank"><?=$row[0]?><?=$row[1]?><?=$row[2]?></a>
-           : <?=$row[3]?></li>
-        <?php endforeach; ?>
-      </ul>
-    <?php else: ?>
-      <p>No Fermi surfaces</p>
-    <?php endif; ?>
+    
+    <?php
+    foreach($obj['pdos'] as $element => $val1){
+      foreach($val1 as $n => $val2){
+        foreach($val2 as $l => $pdos){
+          $orb = $element . $n . $l; 
+          ?>
+          <li><a href="https://fermisurfer.osdn.jp/js/index.php?frmsf=https://s3ds.mdx.jp/fermidata/fermi/<?=$name?>-<?=$orb?>.js" 
+          target="_blank"><?=$orb?></a>
+           : <?=$pdos?></li>
+          <?php
+        }
+      }
+    }
+    ?>
+
   </body>
 </html>
