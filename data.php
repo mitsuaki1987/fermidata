@@ -10,7 +10,7 @@
   <head>
     <title><?=$_GET['name']?></title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="../JSmol.min.js"></script>
+    <script type="text/javascript" src="./JSmol.min.js"></script>
     <script type="text/javascript"> 
 
 // supersimple2.htm - illustrating the use of jQuery(document).ready to 
