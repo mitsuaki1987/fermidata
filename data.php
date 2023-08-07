@@ -1,6 +1,8 @@
 <?php
   $name = $_GET['name'];
   $obj = json_decode( file_get_contents("data.json"), TRUE )[$name];
+  $nat = 0;
+  foreach($obj['type'] as $element_val) $nat += $element_val["nat"];
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +69,7 @@ gnuplot.active_plot_name = "gnuplot_canvas";
 
   <h2>Properties</h2>
 
+  <p>Number of atoms per unit cell : <?=$nat?></p>
   <p>Formation energy : <?=$obj['eform']?> eV/atom</p>
   <p>Magnetization : <?=$obj['magt']?> &mu;<sub>B</sub>/atom</p>
   <p>DOS at E<sub>F</sub> : <?=$obj['dosf']?> /eV/atom (both spin)</p>
@@ -140,14 +143,17 @@ gnuplot.active_plot_name = "gnuplot_canvas";
     <h2>Fermi surface and PDOS (/eV/atom both spin)</h2>
     
     <?php
-    foreach($obj['pdos'] as $element => $val1){
+    foreach($obj['type'] as $element => $val1){
       foreach($val1 as $n => $val2){
-        foreach($val2 as $l => $pdos){
-          $orb = $element . $n . $l; 
+        foreach($val2 as $l => $tnl_obj){
+          $orb = $element . $n . $l;
+          $pdos0 = 0.0;
+          foreach($tnl_obj["pdos"] as $pdos) $pdos0 += $pdos;
+          $pdos0 /= $nat;
           ?>
           <li><a href="https://fermisurfer.osdn.jp/js/index.php?frmsf=https://s3ds.mdx.jp/fermidata/fermi/<?=$name?>-<?=$orb?>.js" 
           target="_blank"><?=$orb?></a>
-           : <?=$pdos?></li>
+           : <?=$pdos0?></li>
           <?php
         }
       }
