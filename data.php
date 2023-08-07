@@ -154,5 +154,11 @@ gnuplot.active_plot_name = "gnuplot_canvas";
     }
     ?>
 
+    <h2>Input and output</h2>
+    <ul>
+      <li><a href="https://s3ds.mdx.jp/fermidata/scfin/scf-<?=$name?>.in">SCF input</a></li>
+      <li><a href="https://s3ds.mdx.jp/fermidata/scfout/scf-<?=$name?>.out">SCF output</a></li>
+    </ul>
+
   </body>
 </html>
