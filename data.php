@@ -33,7 +33,7 @@ Info = {
 	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
 	use: "HTML5",
 	readyFunction: null,
-    script: "load https://s3ds.mdx.jp/fermidata/structure/<?=$name?>.xsf {3,3,3}; set perspectiveDepth ON; select;set defaultLabelXYZ \"%e\"; set labelToggle; set labelAtom; set labelOffset 0 0; color labels black"
+    script: "load ./structure/<?=$name?>.xsf {3,3,3}; set perspectiveDepth ON; select;set defaultLabelXYZ \"%e\"; set labelToggle; set labelAtom; set labelOffset 0 0; color labels black"
 }
 
 $("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
@@ -56,7 +56,7 @@ gnuplot.grid_lines = true;
 gnuplot.zoomed = false;
 gnuplot.active_plot_name = "gnuplot_canvas";
     </script>
-    <script src="https://s3ds.mdx.jp/fermidata/band/<?=$name?>.js"></script>
+    <script src="./band/<?=$name?>.js"></script>
     <link type="text/css" href="./gnuplot/gnuplot_mouse.css" rel="stylesheet">
 	<!-- gnuplot head end -->
   </head>
@@ -151,7 +151,7 @@ gnuplot.active_plot_name = "gnuplot_canvas";
           foreach($tnl_obj["pdos"] as $pdos) $pdos0 += $pdos;
           $pdos0 /= $nat;
           ?>
-          <li><a href="https://fermisurfer.osdn.jp/js/index.php?frmsf=https://s3ds.mdx.jp/fermidata/fermi/<?=$name?>-<?=$orb?>.js" 
+          <li><a href="./fermisurfer/index.php?frmsf=./fermi/<?=$name?>-<?=$orb?>.js" 
           target="_blank"><?=$orb?></a>
            : <?=$pdos0?></li>
           <?php
@@ -162,8 +162,8 @@ gnuplot.active_plot_name = "gnuplot_canvas";
 
     <h2>Input and output</h2>
     <ul>
-      <li><a href="https://s3ds.mdx.jp/fermidata/scfin/scf-<?=$name?>.in">SCF input</a></li>
-      <li><a href="https://s3ds.mdx.jp/fermidata/scfout/scf-<?=$name?>.out">SCF output</a></li>
+      <li><a href="./scfin/scf-<?=$name?>.in">SCF input</a></li>
+      <li><a href="./scfout/scf-<?=$name?>.out">SCF output</a></li>
     </ul>
 
   </body>
