@@ -1,0 +1,28 @@
+&CONTROL
+ calculation = 'scf'
+ prefix = 'Pb1-151378'
+/
+&SYSTEM
+       ibrav = 0
+         nat = 1
+        ntyp = 1
+     ecutwfc = 40.000000
+     ecutrho = 320.000000
+ occupations = 'tetrahedra_opt'
+       nspin = 2
+ starting_magnetization(1) = 1.0
+/
+&ELECTRONS
+ mixing_beta = 0.3
+ conv_thr = 1.000000e-07
+/
+CELL_PARAMETERS angstrom
+     0.000000000000000e+00     2.466500000000000e+00     2.466500000000000e+00
+     2.466500000000000e+00     0.000000000000000e+00     2.466500000000000e+00
+     2.466500000000000e+00     2.466500000000000e+00     0.000000000000000e+00
+ATOMIC_SPECIES
+ Pb 207.200000 Pb.pbe-dn-kjpaw_psl.0.2.2.UPF
+ATOMIC_POSITIONS crystal
+ Pb     0.000000000000000e+00     0.000000000000000e+00     0.000000000000000e+00
+K_POINTS automatic
+ 12 12 12 0 0 0

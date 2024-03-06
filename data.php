@@ -151,7 +151,7 @@ gnuplot.active_plot_name = "gnuplot_canvas";
           foreach($tnl_obj["pdos"] as $pdos) $pdos0 += $pdos;
           $pdos0 /= $nat;
           ?>
-          <li><a href="./fermisurfer/index.php?frmsf=./fermi/<?=$name?>-<?=$orb?>.js" 
+          <li><a href="./fermisurfer/index.php?frmsf=../fermi/<?=$name?>-<?=$orb?>.js" 
           target="_blank"><?=$orb?></a>
            : <?=$pdos0?></li>
           <?php
@@ -162,8 +162,8 @@ gnuplot.active_plot_name = "gnuplot_canvas";
 
     <h2>Input and output</h2>
     <ul>
-      <li><a href="./scfin/scf-<?=$name?>.in">SCF input</a></li>
-      <li><a href="./scfout/scf-<?=$name?>.out">SCF output</a></li>
+      <li><a href="./scfin/scf_<?=$name?>.in">SCF input</a></li>
+      <li><a href="./scfout/scf_<?=$name?>.out">SCF output</a></li>
     </ul>
 
   </body>
