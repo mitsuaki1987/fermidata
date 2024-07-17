@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Material {
+  material_id             Int         @id @default(autoincrement())
+  material_page_url       String      @db.Text
+  material_code           String      @unique @db.VarChar(128)
+  eform_value             Float
+  magt_value              Float
+  dosf_value              Float
+  material_composition    String      @db.VarChar(128)
+  created_at              DateTime    @default(now()) @db.DateTime(0)
+  updated_at              DateTime    @default(now()) @db.DateTime(0)
+
+  types Type[]
+
+  @@map("materials")
+}
+
+model Type {
+  type_id              Int         @id @default(autoincrement())
+  material_id          Int
+  element_symbol_name  String      @db.VarChar(128)
+  nat_value            Int
+  element_data         Json
+  created_at           DateTime    @default(now()) @db.DateTime(0)
+  updated_at           DateTime    @default(now()) @db.DateTime(0)
+
+  material Material    @relation(fields: [material_id], references: [material_id], onDelete: Cascade)
+
+  @@index([material_id])
+  @@map("types")
+}
+
+model ElementSymbol {
+  atomic_number        Int         @id
+  element_symbol       String      @db.VarChar(4)
+  created_at           DateTime    @default(now()) @db.DateTime(0)
+  updated_at           DateTime    @default(now()) @db.DateTime(0)
+
+  @@map("element_symbol")
+}
