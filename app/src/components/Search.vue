@@ -488,7 +488,7 @@ export default {
       if ((this.inputText.includes("#")) && (this.inputText.includes("?"))) {
         this.checkInputText();
       } else {
-        axios.get("http://localhost:3000/materials", {
+        axios.get("http://163.220.177.102:3000/materials", {
           params: {
             keyword: this.inputText,
             minE: this.minEform,
