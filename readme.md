@@ -1,3 +1,77 @@
+# 実行環境セットアップマニュアル
+
+## 概要
+
+- Dockerインストール環境を使用します
+- Dockerを用いてアプリケーション実行環境をセットアップします
+- セットアップした環境にアプリケーションをデプロイします
+
+### 1. 事前準備
+
+- DB設定値の変更
+    - .env ファイルの環境変数を適宜変更してください
+    - my.cnf ファイルの設定値を適宜変更してください
+
+### 2. セットアップ実行
+
+1. docker-compose を実行します
+
+```
+docker-compose up -d
+```
+
+2. Docker 環境にアクセスします
+
+    2-1. バックエンドAPI(api)にアクセス
+
+    ```
+    docker-compose exec api bash
+    ```
+
+    * ここからはDocker環境内(apiディレクトリ直下)での操作です *
+
+    - npm をインストール(アップデート)します
+
+    ```
+    npm install
+    npm update
+    ```
+
+    - DB マイグレーションを実行します
+
+    ```
+    npx prisma migrate dev
+    ```
+
+    - api サーバを起動します
+
+    ```
+    npm run dev
+    ```
+
+    2-2. フロントエンドアプリケーション(app)にアクセス
+
+    ```
+    docker-compose exec app bash
+    ```
+
+    * ここからはDocker環境内(appディレクトリ直下)での操作です *
+
+    - npm をインストールします
+
+    ```
+    npm install
+    npm update
+    ```
+
+    - app サーバを起動します
+
+    ```
+    npm run serve
+    ```
+
+3. ブラウザからアクセスして起動を確認します
+
 # DB操作マニュアル
 
 ## 概要
