@@ -10,6 +10,7 @@
 
     <!-- 検索時入力値表示欄 -->
     <table class="input-table">
+    <tbody>
       <tr>
         <th>material</th>
         <th>eform</th>
@@ -28,6 +29,7 @@
         <td>{{ minMagt }}</td>
         <td>{{ minDosf }}</td>
       </tr>
+    </tbody>
     </table>
     <br>
 
