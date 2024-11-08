@@ -50,10 +50,9 @@
             v-if="item.material"
             :rowspan="item.rowspan"
           >
-            <a :href="item.url">
-              <v-icon class="mr-2">mdi-open-in-new</v-icon>
+            <a :href="'http://163.220.177.102/html/' + item.material + '.html'" target="_blank">
+              {{ item.material }}
             </a>
-            {{ item.material }}
           </td>
           <td v-if="item.eform" :rowspan="item.rowspan">{{ item.eform }}</td>
           <td v-if="item.magt" :rowspan="item.rowspan">{{ item.magt }}</td>
