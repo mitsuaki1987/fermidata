@@ -13,6 +13,14 @@ module.exports = defineConfig({
     ],
   },
 
+  devServer: {
+    host: '0.0.0.0',
+    port: 8080,
+    client: {
+      webSocketURL: 'ws://163.220.177.102:8080/ws',
+    },
+  },
+
   pluginOptions: {
     vuetify: {
 			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
