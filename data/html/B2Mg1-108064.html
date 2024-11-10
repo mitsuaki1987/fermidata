@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>B2Mg1-108064</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../JSmol.min.js"></script>
+    <script type="text/javascript"> 
+// supersimple2.htm - illustrating the use of jQuery(document).ready to 
+// populate all spans and divs AFTER the page is loaded.
+// This is good programming practice.
+$(document).ready(
+function() {
+Info = {
+	width: 600,
+	height: 600,
+	debug: false,
+	j2sPath: "../j2s",
+	color: "0xC0C0C0",
+  disableJ2SLoadMonitor: true,
+  disableInitialConsole: true,
+	addSelectionOptions: false,
+	serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+	use: "HTML5",
+	readyFunction: null,
+    script: "load INLINE \"CRYSTAL\n# Primitive lattice vectors in Angstrom\nPRIMVEC\n 3.08500000000000 0.00000000000000 0.00000000000000\n -1.54250000000000 2.67168837067499 0.00000000000000\n 0.00000000000000 0.00000000000000 3.52300000000000\n# Cartesian coordinates in Angstrom.\nPRIMCOORD\n 3 1\n5     1.54250000000000     0.89056279022500     1.76150000000000\n5     0.00000000000000     1.78112558045000     1.76150000000000\n12     0.00000000000000     0.00000000000000     0.00000000000000\" {3,3,3}; set perspectiveDepth ON; select;set defaultLabelXYZ \"%e\"; set labelToggle; set labelAtom; set labelOffset 0 0; color labels black"
+}
+$("#mydiv").html(Jmol.getAppletHtml("jmolApplet0",Info))
+}
+);
+    </script>
+<!-- gnuplot head start -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+    <script src="../gnuplot/canvastext.js"></script>
+    <script src="../gnuplot/gnuplot_common.js"></script>
+    <script src="../gnuplot/gnuplot_dashedlines.js"></script>
+    <script src="../gnuplot/gnuplot_mouse.js"></script>
+    <script type="text/javascript"> gnuplot.help_URL = "/canvas_help.html"; </script>
+    <script type="text/javascript">
+var canvas, ctx;
+gnuplot.grid_lines = true;
+gnuplot.zoomed = false;
+gnuplot.active_plot_name = "gnuplot_canvas";
+    </script>
+    <script src="../band/B2Mg1-108064.js"></script>
+    <link type="text/css" href="../gnuplot/gnuplot_mouse.css" rel="stylesheet">
+	<!-- gnuplot head end -->
+  </head>
+  <body bgcolor="CCFFCC" onload="gnuplot_canvas(); gnuplot.init();" oncontextmenu="return false;">
+	<h1>B2Mg1-108064</h1>
+	<h2>Crystal structure</h2>
+	<span id=mydiv></span>
+  <h2>Properties</h2>
+  <p>Number of atoms per unit cell : 3</p>
+  <p>Formation energy : -0.3568922999999984 eV/atom</p>
+  <p>Magnetization : 0.0 &mu;<sub>B</sub>/atom</p>
+  <p>DOS at E<sub>F</sub> : 0.2333333333333333 /eV/atom (both spin)</p>
+	<h2>Band structure</h2>
+    <div class="gnuplot">
+      <canvas id="Tile" width="32" height="32" hidden></canvas>
+      <table class="mbleft">
+        <tr>
+          <td class="mousebox">
+            <table class="mousebox" border=0>
+              <tr>
+                <td class="mousebox">
+                  <table class="mousebox" id="gnuplot_mousebox" border=0>
+                    <tr><td class="mbh"></td></tr>
+                    <tr>
+                      <td class="mbh">
+                        <table class="mousebox">
+                          <tr>
+                            <td class="icon"></td>
+                            <td class="icon" onclick=gnuplot.toggle_grid><img src="../gnuplot/grid.png" id="gnuplot_grid_icon" class="icon-image" alt="#" title="toggle grid"></td>
+                            <td class="icon" onclick=gnuplot.unzoom><img src="../gnuplot/previouszoom.png" id="gnuplot_unzoom_icon" class="icon-image" alt="unzoom" title="unzoom"></td>
+                            <td class="icon" onclick=gnuplot.rezoom><img src="../gnuplot/nextzoom.png" id="gnuplot_rezoom_icon" class="icon-image" alt="rezoom" title="rezoom"></td>
+                            <td class="icon" onclick=gnuplot.toggle_zoom_text><img src="../gnuplot/textzoom.png" id="gnuplot_textzoom_icon" class="icon-image" alt="zoom text" title="zoom text with plot"></td>
+                            <td class="icon" onclick=gnuplot.popup_help()><img src="../gnuplot/help.png" id="gnuplot_help_icon" class="icon-image" alt="?" title="help"></td>
+                          </tr>
+                          <tr>
+                            <td class="icon" onclick=gnuplot.toggle_plot("gp_plot_1")>1</td>
+                            <td class="icon" > </td>
+                            <td class="icon" > </td>
+                            <td class="icon" > </td>
+                            <td class="icon" > </td>
+                            <td class="icon" > </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="mousebox">
+                  <table class="mousebox" id="gnuplot_mousebox" border=1>
+                    <tr>
+                      <td class="mb0">x&nbsp;</td>
+                      <td class="mb1"><span id="gnuplot_canvas_x">&nbsp;</span></td>
+                    </tr>
+                    <tr>
+                      <td class="mb0">y&nbsp;</td>
+                      <td class="mb1"><span id="gnuplot_canvas_y">&nbsp;</span></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table class="plot">
+              <tr>
+                <td>
+                  <canvas id="gnuplot_canvas" width="600" height="400" tabindex="0">
+                    Sorry, your browser seems not to support the HTML 5 canvas element
+                  </canvas>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h2>Fermi surface and PDOS (/eV/atom both spin)</h2>
+    <ul>
+      <li>B2S(<a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_B2S_1.js" target="_blank">u</a>, <a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_B2S_2.js" target="_blank">d</a>) : 0.00276</li>
+      <li>B2P(<a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_B2P_1.js" target="_blank">u</a>, <a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_B2P_2.js" target="_blank">d</a>) : 0.20133333333333334</li>
+      <li>Mg3S(<a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_Mg3S_1.js" target="_blank">u</a>, <a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_Mg3S_2.js" target="_blank">d</a>) : 0.010533333333333334</li>
+      <li>Mg3P(<a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_Mg3P_1.js" target="_blank">u</a>, <a href="../fermisurfer/index.php?frmsf=../js/B2Mg1-108064_Mg3P_2.js" target="_blank">d</a>) : 0.0164</li>
+    </ul>
+    <h2>Input and output</h2>
+    <ul>
+      <li><a href="../scfin/scf_B2Mg1-108064.in">SCF input</a></li>
+      <li><a href="../scfout/scf_B2Mg1-108064.out">SCF output</a></li>
+    </ul>
+  </body>
+</html>

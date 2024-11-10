@@ -1,66 +1,74 @@
 <template>
   <v-container>
-      <v-form action="#" method="POST">
-        <v-container class="flex search-area">
-          <v-sheet class="w-25 mr-8">
-            <v-text-field variant="outlined" label="Composition" class="w-100" v-model="inputText" clearable>
+    <v-form action="#" method="POST">
+      <v-container>
+        <v-sheet class="mr-8 mt-2">
+          <v-btn @click="clickSearch">Search</v-btn>
+        </v-sheet>
+        <v-sheet class="w-25 mr-8">
+          <v-text-field variant="outlined" label="Composition" class="w-100" v-model="inputText" clearable>
+          </v-text-field>
+        </v-sheet>
+
+	<ul>
+	  <li>
+	    Alphabetical order. No white space.
+	  </li>
+	  <li>
+	    "O2Ti1" indicates two O atoms and one Ti atom composition. 
+            This also finds systems such as 10 O atoms and 5 Ti atoms in a unit cell.
+	  </li>
+	  <li>
+            "Mg#O#si#" finds Mg1O3Si1, Mg2O4Si2, etc. "#" means an arbitrary number.
+	  </li>
+          <li>
+	    "?1?1O3" finds Ba1Ti1O3, Ba1Bi1O3, Mg1O3Si1, etc. "?" means an arbitrary element.
+	  </li>
+	  <li>
+            "*Fe#O#*" finds Fe1O1, "La1Fe1As1O1, etc.
+            "*" means an arbitrary string.
+	  </li>
+	</ul>
+
+        <v-sheet class="my-2" width="">Formation energy from isolated atoms (eV/atom)</v-sheet>
+        <div class="flex">
+          <v-sheet class="mr-4" width="80px">
+            <v-text-field variant="outlined" label="min" class="w-100" v-model="minEform">
             </v-text-field>
           </v-sheet>
-          <v-sheet class="mr-8 mt-2">
-            <v-btn @click="clickSearch">
-              Search
-            </v-btn>
+          <v-sheet class="mr-8" width="80px">
+            <v-text-field variant="outlined" label="max" class="w-100" v-model="maxEform">
+            </v-text-field>
           </v-sheet>
-          <v-card class="usage-area" v-if="isOpenUsage">
-            (a) "H2O1" indicates two H atoms and one O atom composition. <br>
-            <span class="ml-5">This also finds systems such as 10 H atoms and 5 O atoms in a unit cell.</span><br>
-            (b) "Mg#O#si#" finds Mg1O3Si1, Mg2O4Si2, etc. <br>
-            <span class="ml-5">"#" means an arbitrary number.</span><br>
-            (c) "?1?1O3" finds Ba1Ti1O3, Ba1Bi1O3, Mg1O3Si1, etc. <br>
-            <span class="ml-5">"?" means an arbitrary element.</span><br>
-            (d) "*Fe#O#*" finds Fe1O1, "La1Fe1As1O1, etc. <br>
-            <span class="ml-5">"*" means an arbitrary string.</span><br>
-          </v-card>
-          <v-chip class="ml-auto" prepend-icon="mdi-help-circle" @click="isOpenUsage = !isOpenUsage">Composition-formula rule</v-chip>
-        </v-container>
+        </div>
 
-        <v-container>
-          <v-sheet class="my-2" width="">Formation energy from isolated atoms (eV/atom)</v-sheet>
-          <div class="flex">
-            <v-sheet class="mr-4" width="80px">
-              <v-text-field variant="outlined" label="min" class="w-100" v-model="minEform">
-              </v-text-field>
-            </v-sheet>
-            <v-sheet class="mr-8" width="80px">
-              <v-text-field variant="outlined" label="max" class="w-100" v-model="maxEform">
-              </v-text-field>
-            </v-sheet>
-          </div>
-          <v-sheet class="my-2" width="">Total magnetic moment (/atom)</v-sheet>
-          <div class="flex">
-            <v-sheet class="mr-4" width="80px">
-              <v-text-field variant="outlined" label="min" class="w-100" v-model="minMagt">
-              </v-text-field>
-            </v-sheet>
-            <v-sheet class="mr-8" width="80px">
-              <v-text-field variant="outlined" label="max" class="w-100" v-model="maxMagt">
-              </v-text-field>
-            </v-sheet>
-          </div>
-          <v-sheet class="my-2" width="">Density of states at Fermi level (both spin/eV/atom)</v-sheet>
-          <div class="flex">
-            <v-sheet class="mr-4" width="80px">
-              <v-text-field variant="outlined" label="min" class="w-100" v-model="minDosf">
-              </v-text-field>
-            </v-sheet>
-            <v-sheet class="mr-8" width="80px">
-              <v-text-field variant="outlined" label="max" class="w-100" v-model="maxDosf">
-              </v-text-field>
-            </v-sheet>
-          </div>
-        </v-container>
+        <v-sheet class="my-2" width="">Total magnetic moment (/atom)</v-sheet>
+        <div class="flex">
+          <v-sheet class="mr-4" width="80px">
+            <v-text-field variant="outlined" label="min" class="w-100" v-model="minMagt">
+            </v-text-field>
+          </v-sheet>
+          <v-sheet class="mr-8" width="80px">
+            <v-text-field variant="outlined" label="max" class="w-100" v-model="maxMagt">
+            </v-text-field>
+          </v-sheet>
+        </div>
 
-      </v-form>
+        <v-sheet class="my-2" width="">Density of states at Fermi level (both spin/eV/atom)</v-sheet>
+        <div class="flex">
+          <v-sheet class="mr-4" width="80px">
+            <v-text-field variant="outlined" label="min" class="w-100" v-model="minDosf">
+            </v-text-field>
+          </v-sheet>
+          <v-sheet class="mr-8" width="80px">
+            <v-text-field variant="outlined" label="max" class="w-100" v-model="maxDosf">
+            </v-text-field>
+          </v-sheet>
+        </div>
+      </v-container>
+
+    </v-form>
+
     <table style="text-decoration-line: none;">
       <tbody style="text-decoration-line: none;">
         <tr>
@@ -241,7 +249,6 @@
       </tbody>
     </table>
   </v-container>
-
 </template>
 
 <script>
@@ -298,6 +305,7 @@ export default {
   }
 }
 </script>
+
 <style>
 table {
   border-collapse: collapse;
