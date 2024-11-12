@@ -50,7 +50,7 @@
             v-if="item.material"
             :rowspan="item.rowspan"
           >
-            <a :href="'http://163.220.177.102/html/' + item.material + '.html'" target="_blank">
+            <a :href="'http://163.220.177.91/fermidata/html/' + item.material + '.html'" target="_blank">
               {{ item.material }}
             </a>
           </td>

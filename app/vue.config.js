@@ -17,7 +17,7 @@ module.exports = defineConfig({
     host: '0.0.0.0',
     port: 8080,
     client: {
-      webSocketURL: 'ws://163.220.177.102:8080/ws',
+      webSocketURL: 'ws://163.220.177.91:8080/ws',
     },
   },
 

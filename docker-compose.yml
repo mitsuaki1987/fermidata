@@ -60,8 +60,8 @@ services:
     working_dir: /api
 
     # 起動後に実行するコマンドを指定
-    command:
-      npm run dev
+    #command:
+      #  npm run dev
     #   npm install
 
     #コンテナを起動させ続けるよう設定
@@ -91,8 +91,8 @@ services:
 
     working_dir: /app
 
-    command:
-      npm run serve
+      #command:
+      #  npm run serve
     #   npm install
 
     #コンテナを起動させ続けるよう設定

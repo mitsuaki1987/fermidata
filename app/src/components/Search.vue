@@ -2,6 +2,8 @@
   <v-container>
     <v-form action="#" method="POST">
       <v-container>
+
+        <h1>FermiSurfer database</h1>
         <v-sheet class="mr-8 mt-2">
           <v-btn @click="clickSearch">Search</v-btn>
         </v-sheet>
@@ -274,7 +276,7 @@ export default {
       if ((this.inputText.includes("#")) && (this.inputText.includes("?"))) {
         this.checkInputText();
       } else {
-        axios.get("http://163.220.177.102:3000/materials", {
+        axios.get("http://163.220.177.91:3000/materials", {
           params: {
             keyword: this.inputText,
             minE: this.minEform,
