@@ -175,9 +175,9 @@ export default {
 </script>
 <style>
   #result-table {
-    max-width: 80%;
+    max-width: 95%;
     margin: 0 auto;
-    height: 600px;
+    :height: 600px;
     border: solid 1px #CCCCCC;
     position: relative;
   }
