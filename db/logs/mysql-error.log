@@ -1,0 +1,464 @@
+2024-11-11T01:50:42.680740+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-11T01:50:42.682017+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-11T01:50:42.687185+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-11T01:50:42.852931+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-11T01:50:43.040831+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-11T01:50:43.040857+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-11T01:50:43.042148+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-11T01:50:43.065179+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-11T01:50:43.065228+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-11T01:52:36.535426+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-11-11T01:52:37.555387+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-11-11T01:52:52.315900+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-11T01:52:52.317991+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-11T01:52:52.325295+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-11T01:52:52.496477+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-11T01:52:52.777167+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-11T01:52:52.777210+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-11T01:52:52.779017+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-11T01:52:52.811067+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-11T01:52:52.811309+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-11T01:53:09.241099+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-11-11T01:53:10.171714+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-11-11T01:54:48.583650+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-11T01:54:48.585390+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-11T01:54:48.592594+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-11T01:54:48.735024+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-11T01:54:48.970813+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-11T01:54:48.970849+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-11T01:54:48.972623+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-11T01:54:48.994865+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-11T01:54:48.994890+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-11T01:55:18.349723+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-11-11T01:55:19.378007+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-11-11T01:55:28.146548+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-11T01:55:28.148270+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-11T01:55:28.154690+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-11T01:55:28.308486+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-11T01:55:28.600428+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-11T01:55:28.600520+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-11T01:55:28.605481+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-11T01:55:28.635605+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-11T01:55:28.635627+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-11T02:35:04.766875+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-11-11T02:35:05.335310+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-11-11T02:37:38.799313+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-11T02:37:38.801067+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-11T02:37:38.808070+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-11T02:37:38.959426+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-11T02:37:39.241270+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-11T02:37:39.241304+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-11T02:37:39.243050+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-11T02:37:39.267049+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-11T02:37:39.267088+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-12T12:42:53.522973+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-12T12:42:53.525233+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-12T12:42:53.542301+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-12T12:42:53.834091+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-12T12:42:53.997619+09:00 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2024-11-12T12:42:54.007800+09:00 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2024-11-12T12:42:54.028001+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-12T12:42:54.028027+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-12T12:42:54.030584+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-12T12:42:54.054684+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-12T12:42:54.054715+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-11-12T15:34:26.438093+09:00 22 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2024-11-22T20:27:52.817294+09:00 681 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2024-11-24T01:12:48.212542+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-11-24T01:12:50.244649+09:00 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 768  user: 'root'.
+2024-11-24T01:12:51.286612+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-11-24T01:20:15.296840+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-11-24T01:20:15.298888+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-11-24T01:20:15.320899+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-11-24T01:20:15.521574+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-11-24T01:20:15.751842+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-11-24T01:20:15.751886+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-11-24T01:20:15.754998+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-11-24T01:20:15.797274+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-11-24T01:20:15.797441+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-12-03T07:00:07.321497+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-12-03T07:00:08.365220+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2024-12-06T16:52:57.961491+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2024-12-06T16:52:57.965426+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2024-12-06T16:52:58.001314+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2024-12-06T16:52:58.258100+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2024-12-06T16:52:58.574705+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2024-12-06T16:52:58.574750+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2024-12-06T16:52:58.578001+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2024-12-06T16:52:58.622534+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2024-12-06T16:52:58.622756+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2024-12-09T20:52:29.917405+09:00 183 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2024-12-16T20:57:38.327166+09:00 1437 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2024-12-24T18:14:22.607214+09:00 2115 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2024-12-25T03:10:07.160234+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2024-12-25T03:10:08.173008+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-01-06T11:54:50.455536+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-01-06T11:54:50.458020+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-01-06T11:54:50.479877+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-01-06T11:54:50.674834+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-01-06T11:54:50.923542+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-01-06T11:54:50.923577+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-01-06T11:54:50.926647+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-01-06T11:54:50.957900+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-01-06T11:54:50.957940+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-01-09T16:44:21.742666+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-01-09T16:44:23.777754+09:00 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 286  user: 'root'.
+2025-01-09T16:44:24.908597+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-01-09T16:46:52.374248+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-01-09T16:46:52.375848+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-01-09T16:46:52.394078+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-01-09T16:46:52.646188+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-01-09T16:46:52.967012+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-01-09T16:46:52.967040+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-01-09T16:46:52.969083+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-01-09T16:46:53.025120+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-01-09T16:46:53.025367+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-03T16:35:36.402252+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-02-03T16:35:38.434994+09:00 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 2312  user: 'root'.
+2025-02-03T16:35:39.565004+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-03T16:41:18.542306+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-03T16:41:18.544716+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-02-03T16:41:18.565625+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-03T16:41:18.770549+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-03T16:41:19.065034+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-03T16:41:19.065069+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-03T16:41:19.068477+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-03T16:41:19.109931+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-02-03T16:41:19.109964+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-12T05:31:32.020820+09:00 995 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.33).
+2025-02-12T05:31:33.495697+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-12T05:31:35.009946+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-12T05:31:35.011750+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-02-12T05:31:35.020418+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-12T05:31:35.173236+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-12T05:31:35.361424+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-12T05:31:35.361458+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-12T05:31:35.363461+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-12T05:31:35.392245+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-12T05:31:35.392300+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-02-13T16:26:08.266306+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-02-13T16:26:09.391493+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-13T16:26:29.768440+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-13T16:26:29.770153+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-02-13T16:26:29.776786+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-13T16:26:29.906803+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-13T16:26:30.080195+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-13T16:26:30.080226+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-13T16:26:30.081844+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-13T16:26:30.103526+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-13T16:26:30.103511+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-02-13T16:46:27.834732+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-02-13T16:46:28.694382+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-13T16:50:44.580135+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-13T16:50:44.581930+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-02-13T16:50:44.588792+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-13T16:50:44.729460+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-13T16:50:44.927524+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-13T16:50:44.927610+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-13T16:50:44.931024+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-13T16:50:44.958100+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-13T16:50:44.958175+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-02-13T17:04:20.814985+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-02-13T17:04:22.817834+09:00 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 9  user: 'root'.
+2025-02-13T17:04:23.387302+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-13T17:07:13.697954+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-13T17:07:13.698080+09:00 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.33) initializing of server in progress as process 81
+2025-02-13T17:07:13.722598+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-13T17:07:14.050419+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-13T17:07:14.925411+09:00 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2025-02-13T17:07:17.384216+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-13T17:07:17.385992+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 125
+2025-02-13T17:07:17.408397+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-13T17:07:17.525054+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-13T17:07:17.775337+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-13T17:07:17.775424+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-13T17:07:17.779866+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-13T17:07:17.799134+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2025-02-13T17:07:17.799172+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: /var/run/mysqld/mysqlx.sock
+2025-02-13T17:07:19.802596+09:00 11 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.33).
+2025-02-13T17:07:21.310783+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-02-13T17:07:22.078959+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-02-13T17:07:22.080684+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-02-13T17:07:22.087587+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-02-13T17:07:22.229329+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-02-13T17:07:22.485051+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-02-13T17:07:22.485084+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-02-13T17:07:22.487011+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-02-13T17:07:22.504357+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-02-13T17:07:22.504595+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-02-15T04:40:28.721851+09:00 225 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-04T13:06:13.566033+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-03-04T13:06:13.569152+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-03-04T13:06:13.599436+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-04T13:06:13.965379+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-04T13:06:14.270310+09:00 0 [System] [MY-010229] [Server] Starting XA crash recovery...
+2025-03-04T13:06:14.281476+09:00 0 [System] [MY-010232] [Server] XA crash recovery finished.
+2025-03-04T13:06:14.431422+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-04T13:06:14.431457+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-04T13:06:14.435145+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-04T13:06:14.463176+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-03-04T13:06:14.463220+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-11T03:08:56.467921+09:00 559 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-11T19:36:44.824523+09:00 835 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-11T20:02:44.104604+09:00 837 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-11T21:58:21.146780+09:00 847 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-11T22:14:01.076019+09:00 848 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-11T22:45:30.958913+09:00 855 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-12T00:04:40.563141+09:00 863 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T07:37:53.006095+09:00 1066 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T07:37:53.944175+09:00 1067 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T09:01:24.815145+09:00 1072 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T09:01:26.117050+09:00 1073 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T12:39:02.523241+09:00 1078 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-13T12:39:04.292996+09:00 1079 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T03:40:56.833834+09:00 1368 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T03:40:59.275855+09:00 1369 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T19:26:13.921784+09:00 1433 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T19:26:16.843162+09:00 1434 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T21:12:18.854021+09:00 1440 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-15T21:12:19.778133+09:00 1441 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-16T01:41:34.244670+09:00 1455 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-16T01:41:35.102159+09:00 1456 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-16T15:30:29.285181+09:00 2288 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-16T15:30:31.435869+09:00 2289 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-17T00:28:53.378505+09:00 2310 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-17T00:28:55.378793+09:00 2311 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T03:35:41.268428+09:00 2395 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T03:35:42.933949+09:00 2396 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T15:12:34.277687+09:00 2422 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T15:12:35.128105+09:00 2423 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T15:40:34.457964+09:00 2427 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-18T15:40:36.751739+09:00 2428 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-19T09:07:11.976212+09:00 2512 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-19T09:07:12.991377+09:00 2513 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-19T18:50:58.637991+09:00 2554 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-19T18:50:59.896953+09:00 2555 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-22T12:18:14.471952+09:00 3093 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-22T12:18:16.866272+09:00 3094 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-22T19:00:34.844985+09:00 3122 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-22T19:00:36.025649+09:00 3123 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-25T06:13:14.480096+09:00 3392 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-25T06:13:15.333876+09:00 3393 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-25T13:48:56.533963+09:00 3419 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-25T13:48:58.542062+09:00 3420 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-28T16:18:23.911648+09:00 3784 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-28T16:18:25.636875+09:00 3785 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-29T02:07:02.276470+09:00 3852 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-29T02:07:03.262482+09:00 3853 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-30T04:42:01.729485+09:00 3968 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-30T04:42:03.243285+09:00 3969 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-31T07:33:38.219625+09:00 4200 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-31T07:33:39.953154+09:00 4201 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-03-31T14:17:46.118717+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-03-31T14:17:46.626264+09:00 0 [ERROR] [MY-011945] [InnoDB] Cannot write to '/var/lib/mysql/ib_buffer_pool.incomplete': No space left on device
+2025-03-31T14:17:47.211965+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-03-31T17:08:35.563494+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-03-31T17:08:35.566402+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-03-31T17:08:35.588310+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-03-31T17:08:35.796702+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-03-31T17:08:36.022111+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-03-31T17:08:36.022151+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-03-31T17:08:36.024731+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-31T17:08:36.054945+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-03-31T17:08:36.054975+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-04-03T12:04:55.639225+09:00 373 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-03T12:04:57.639395+09:00 374 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-04T17:24:27.512912+09:00 492 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-04T17:24:29.059622+09:00 493 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T00:23:15.429561+09:00 521 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T00:23:17.350061+09:00 522 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T02:27:01.373154+09:00 529 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T02:27:04.451111+09:00 530 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T14:21:05.056987+09:00 549 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-05T14:21:06.360946+09:00 550 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-07T09:40:12.871209+09:00 821 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-07T09:40:14.193015+09:00 822 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-07T18:01:43.860845+09:00 869 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-07T18:01:45.728066+09:00 870 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T09:40:53.940698+09:00 1004 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T09:40:55.203191+09:00 1005 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T10:23:30.138073+09:00 1020 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T10:23:32.875519+09:00 1021 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T19:09:14.593401+09:00 1081 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T19:09:16.594452+09:00 1082 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:07.850068+09:00 1166 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:08.914031+09:00 1167 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:09.966092+09:00 1168 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:11.077401+09:00 1169 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:12.184365+09:00 1170 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:24.173092+09:00 1171 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:25.248385+09:00 1172 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:26.312863+09:00 1173 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:27.392589+09:00 1174 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-08T23:52:28.470458+09:00 1175 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:42.283271+09:00 1184 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:43.329844+09:00 1185 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:44.398713+09:00 1186 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:45.474381+09:00 1187 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:46.563130+09:00 1188 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:47.985119+09:00 1189 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:49.020835+09:00 1190 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:50.072167+09:00 1191 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:51.131209+09:00 1192 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T02:42:52.181132+09:00 1193 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T17:11:17.015973+09:00 1269 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-09T17:11:18.854391+09:00 1270 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-10T00:07:22.889742+09:00 1343 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-10T00:07:24.031916+09:00 1344 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-10T07:49:16.922582+09:00 1401 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-10T07:49:18.671840+09:00 1402 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-11T06:03:13.595540+09:00 1536 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-11T06:03:15.222796+09:00 1537 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-04-11T09:14:17.821232+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-04-11T09:14:18.855945+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-04-17T11:31:40.073626+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-04-17T11:31:40.076341+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-04-17T11:31:40.104819+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-04-17T11:31:40.303113+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-04-17T11:31:40.585658+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-04-17T11:31:40.585692+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-04-17T11:31:40.588185+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-17T11:31:40.626255+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-04-17T11:31:40.626210+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-04-17T12:13:38.675370+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-04-17T12:13:40.722854+09:00 0 [Warning] [MY-010909] [Server] /usr/sbin/mysqld: Forcing close of thread 8  user: 'root'.
+2025-04-17T12:13:41.173195+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-04-17T12:16:05.652324+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-04-17T12:16:05.654890+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-04-17T12:16:05.677091+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-04-17T12:16:05.925327+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-04-17T12:16:06.150442+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-04-17T12:16:06.150471+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-04-17T12:16:06.155629+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-17T12:16:06.187858+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-04-17T12:16:06.187969+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-05-17T10:09:09.120058+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-05-17T10:09:09.925556+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.
+2025-05-17T10:11:45.614357+09:00 0 [Warning] [MY-011068] [Server] The syntax '--skip-host-cache' is deprecated and will be removed in a future release. Please use SET GLOBAL host_cache_size=0 instead.
+2025-05-17T10:11:45.616407+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.33) starting as process 1
+2025-05-17T10:11:45.637423+09:00 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2025-05-17T10:11:46.011498+09:00 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2025-05-17T10:11:46.254988+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2025-05-17T10:11:46.255015+09:00 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2025-05-17T10:11:46.257603+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-05-17T10:11:46.295330+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /var/run/mysqld/mysqlx.sock
+2025-05-17T10:11:46.295363+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.33'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2025-05-30T01:27:10.812065+09:00 1616 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:12.153382+09:00 1617 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:13.459318+09:00 1618 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:14.782996+09:00 1619 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:16.125664+09:00 1620 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:17.495772+09:00 1621 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:18.883770+09:00 1622 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:20.295752+09:00 1623 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:21.631896+09:00 1624 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:22.973318+09:00 1625 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:24.311996+09:00 1626 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:25.644258+09:00 1627 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:27.022080+09:00 1628 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:28.373671+09:00 1629 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:29.698028+09:00 1630 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:31.029569+09:00 1631 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:32.368984+09:00 1632 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:33.758886+09:00 1633 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:35.175001+09:00 1634 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:36.547649+09:00 1635 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:37.902989+09:00 1636 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:39.283575+09:00 1637 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:40.673295+09:00 1638 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:42.043329+09:00 1639 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:43.391251+09:00 1640 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:44.736338+09:00 1641 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:46.109912+09:00 1642 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:47.460429+09:00 1643 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:48.786171+09:00 1644 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:50.150366+09:00 1645 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:51.504925+09:00 1646 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:52.876360+09:00 1647 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:54.240123+09:00 1648 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:55.617089+09:00 1649 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:57.012336+09:00 1650 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:58.362996+09:00 1651 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:27:59.687428+09:00 1652 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:01.050248+09:00 1653 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:02.443044+09:00 1654 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:03.848995+09:00 1655 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:05.208418+09:00 1656 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:06.547663+09:00 1657 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:07.899893+09:00 1658 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:09.207291+09:00 1659 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:10.538395+09:00 1660 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:11.836872+09:00 1661 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:13.187622+09:00 1662 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:14.546711+09:00 1663 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:15.850322+09:00 1664 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:17.150681+09:00 1665 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:18.455614+09:00 1666 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:19.812116+09:00 1667 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:21.199474+09:00 1668 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:22.593164+09:00 1669 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:23.987410+09:00 1670 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:25.392317+09:00 1671 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:26.745489+09:00 1672 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:28.094735+09:00 1673 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:29.462680+09:00 1674 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:30.798196+09:00 1675 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:32.141676+09:00 1676 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:33.241264+09:00 1677 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:34.593388+09:00 1678 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:35.935432+09:00 1679 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:37.246643+09:00 1680 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:38.573035+09:00 1681 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:39.930715+09:00 1682 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:41.277436+09:00 1683 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:42.625989+09:00 1684 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:43.956047+09:00 1685 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:45.264614+09:00 1686 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:46.598434+09:00 1687 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:47.935740+09:00 1688 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:49.289457+09:00 1689 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:50.665036+09:00 1690 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:52.033099+09:00 1691 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:53.419745+09:00 1692 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:54.741686+09:00 1693 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:56.041918+09:00 1694 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:57.336857+09:00 1695 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:28:58.701268+09:00 1696 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:00.043782+09:00 1697 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:01.361943+09:00 1698 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:02.692838+09:00 1699 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:04.028560+09:00 1700 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:05.375136+09:00 1701 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:06.755012+09:00 1702 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:08.111722+09:00 1703 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:09.439197+09:00 1704 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:10.766235+09:00 1705 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:12.095500+09:00 1706 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:13.447558+09:00 1707 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:14.783798+09:00 1708 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:16.143714+09:00 1709 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:17.516812+09:00 1710 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:18.893855+09:00 1711 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:20.210563+09:00 1712 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:21.498653+09:00 1713 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:22.798303+09:00 1714 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:24.130650+09:00 1715 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:25.525582+09:00 1716 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:26.883259+09:00 1717 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:28.173012+09:00 1718 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:29.225107+09:00 1719 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:30.531687+09:00 1720 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:31.839578+09:00 1721 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:33.170922+09:00 1722 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:34.507340+09:00 1723 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:35.885994+09:00 1724 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:37.249001+09:00 1725 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:38.546909+09:00 1726 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:39.873207+09:00 1727 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:41.254979+09:00 1728 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:42.638224+09:00 1729 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:44.015064+09:00 1730 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:45.335375+09:00 1731 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-30T01:29:46.656269+09:00 1732 [Warning] [MY-013360] [Server] Plugin sha256_password reported: ''sha256_password' is deprecated and will be removed in a future release. Please use caching_sha2_password instead'
+2025-05-31T16:09:50.296261+09:00 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 8.0.33).
+2025-05-31T16:09:51.125533+09:00 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.33)  MySQL Community Server - GPL.

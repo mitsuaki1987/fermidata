@@ -21,7 +21,7 @@
             This also finds systems such as 10 O atoms and 5 Ti atoms in a unit cell.
 	  </li>
 	  <li>
-            "Mg#O#si#" finds Mg1O3Si1, Mg2O4Si2, etc. "#" means an arbitrary number.
+            "Mg#O#Si#" finds Mg1O3Si1, Mg2O4Si2, etc. "#" means an arbitrary number.
 	  </li>
           <li>
 	    "?1?1O3" finds Ba1Ti1O3, Ba1Bi1O3, Mg1O3Si1, etc. "?" means an arbitrary element.
@@ -276,7 +276,7 @@ export default {
       if ((this.inputText.includes("#")) && (this.inputText.includes("?"))) {
         this.checkInputText();
       } else {
-        axios.get("http://163.220.177.91:3000/materials", {
+        axios.get("http://ip-163-220-177-91.compute.mdx1.jp:3000/materials", {
           params: {
             keyword: this.inputText,
             minE: this.minEform,

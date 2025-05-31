@@ -9,7 +9,7 @@ const port = 3000;
 
 // CORSでhttp://localhost:8080からのリクエストを許可
 app.use(cors({
-    origin: 'http://163.220.177.91:8080',
+    origin: 'http://ip-163-220-177-91.compute.mdx1.jp:8080',
     credentials: true
 }));
 
