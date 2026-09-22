@@ -62,7 +62,7 @@ sudo systemctl restart fermidata-api
 
 ```
 systemctl status fermidata-api mysql apache2
-sudo journalctl -u fermidata-api -f        # API のログ（console.log もここに出る）
+sudo journalctl -u fermidata-api -f        # API のログ（1リクエスト1行）
 sudo tail -f /var/log/mysql/error.log      # MySQL エラーログ
 sudo tail -f /var/log/mysql/mysql-slow.log # スロークエリ（5秒超）
 sudo tail -f /var/log/apache2/access.log   # Apache アクセスログ
@@ -70,6 +70,16 @@ sudo tail -f /var/log/apache2/access.log   # Apache アクセスログ
 
 いずれのサービスも `systemctl enable` 済みなので、OS 再起動後は自動で復帰します。
 API は異常終了しても systemd が5秒後に再起動します。
+
+API のログは1リクエスト1行です。
+
+```
+GET /materials keyword=O2Ru1 minE=-1 -> 3 hits (28ms)
+GET /materials failed: PrismaClientValidationError: Argument `nat_value` is missing.
+```
+
+検索条件の組み立て（`whereQuery`）やスタックトレースまで追いたい場合は `api/.env` に
+`API_LOG_LEVEL="debug"` を追記して `sudo systemctl restart fermidata-api` してください。
 
 ## ローカル開発（ホットリロード）
 

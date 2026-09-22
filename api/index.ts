@@ -9,11 +9,37 @@ const app = express();
 const port = Number(process.env.API_PORT) || 3000;
 const host = process.env.API_HOST || '127.0.0.1';
 
+// ログは1リクエスト1行に抑える。検索条件の組み立てを追う場合は
+// API_LOG_LEVEL=debug を指定すると whereQuery の内容も出力する。
+const debugLog = process.env.API_LOG_LEVEL === 'debug';
+
 const prisma = new PrismaClient();
+
+// Express 4 は async ハンドラ内の例外を捕捉しないため、そのままだと
+// 未処理の Promise 拒否として Node がプロセスを終了してしまう。
+// (例: 元素数のない組成式で nat_value が NaN になり Prisma の検証が失敗する)
+// ここで受け止めて 500 を返し、プロセスは生かしたままにする。
+function asyncHandler(handler: (req: Request, res: Response) => Promise<void>) {
+    return (req: Request, res: Response) => {
+        handler(req, res).catch((error: unknown) => {
+            const message = error instanceof Error ? error.message : String(error);
+            const lines = message.split('\n').map((line) => line.trim()).filter(Boolean);
+            const name = error instanceof Error ? error.name : 'Error';
+            console.error(`${req.method} ${req.path} failed: ${name}: ${lines[lines.length - 1] || 'unknown error'}`);
+            if (debugLog && error instanceof Error) {
+                console.error(error.stack);
+            }
+            if (!res.headersSent) {
+                res.status(500).send({ error: name });
+            }
+        });
+    };
+}
 
 app.get('/', (req: Request, res: Response) => res.send('Hello World!'));
 
-app.get('/materials', async (req: Request, res: Response) => {
+app.get('/materials', asyncHandler(async (req: Request, res: Response) => {
+    const startedAt = Date.now();
     var minE = req.query.minE;
 
     // where 句の作成：入力値がない場合にエラーにならないように対応
@@ -29,8 +55,6 @@ app.get('/materials', async (req: Request, res: Response) => {
         // 検索記号を用いない場合：組成式の倍数検索が可能
         // 組成式の倍数検索処理（例：O2Ru1 → O2Ru1/O4Ru2/O6Ru3）
         if ((!keyword.includes("*")) && (!keyword.includes("#")) && (!keyword.includes("?"))) {
-            console.log("test 組成式検索");
-
             // ループ処理のために最大値を取得
             const maxNatValue = await prisma.type.findFirst({
                 // const maxNatValue = prisma.type.findFirst({
@@ -41,7 +65,6 @@ app.get('/materials', async (req: Request, res: Response) => {
                     nat_value: 'desc'
                 }
             }) || { nat_value: 0 };
-            console.log(`The maximum value of 'nat_value' is: ${maxNatValue?.nat_value}`);
 
             const elementArrays: { element: string; count: number }[][] = generateElementArrays(maxNatValue.nat_value, keyword);
             // console.log('elementArrays:' + JSON.stringify(elementArrays));
@@ -149,7 +172,9 @@ app.get('/materials', async (req: Request, res: Response) => {
         }
     }
 
-    console.log('whereQuery:' + JSON.stringify(whereQuery));
+    if (debugLog) {
+        console.log('whereQuery:' + JSON.stringify(whereQuery));
+    }
     var materials = await prisma.material.findMany(
         {
             where: whereQuery,
@@ -164,9 +189,15 @@ app.get('/materials', async (req: Request, res: Response) => {
         }
     );
 
-    // console.log('materials:' + JSON.stringify(materials));
+    // 1リクエスト1行: 検索条件・ヒット件数・所要時間
+    const conditions = Object.entries(req.query)
+        .filter(([, value]) => value !== undefined && value !== '')
+        .map(([key, value]) => `${key}=${value}`)
+        .join(' ');
+    console.log(`GET /materials ${conditions} -> ${materials.length} hits (${Date.now() - startedAt}ms)`);
+
     res.send(materials);
-});
+}));
 
 app.post('/materials', async (req: Request, res: Response) => {
     // res.send('Hello World!!!!!')
@@ -184,7 +215,6 @@ function parseChemicalFormula(formula: string): Record<string, number | string> 
 
     // 正規表現パターンにマッチするトークンを取得
     const tokens = formula.match(pattern) || [];
-    console.log('(tokens):' + tokens);
 
     // トークンごとに処理
     for (let i = 0; i < tokens.length; i++) {
@@ -265,7 +295,6 @@ function convertObjectToArray(objList: { element: string; count: number }[][]): 
         const counts = list.map(entry => entry.count);
         const obj = list.map((entry, index) => `${entry.element}${counts[index]}`);
         const elm = obj.join("");
-        console.log('(elm):' + elm);
         result.push(elm);
     });
     // console.log('(result):' + result);
