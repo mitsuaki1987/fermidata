@@ -24,7 +24,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  // publicPath (/fermidata/search/) と揃える
+  history: createWebHistory('/fermidata/search/'),
   routes,
 })
 

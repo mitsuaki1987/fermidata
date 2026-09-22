@@ -1,0 +1,32 @@
+# fermidata: native (non-Docker) MySQL settings
+# Migrated from db/conf/my.cnf of the former docker-compose setup.
+[mysqld]
+character-set-server = utf8mb4
+collation-server     = utf8mb4_bin
+
+# タイムゾーンの設定
+default-time-zone = SYSTEM
+log_timestamps    = SYSTEM
+
+# スロークエリログの設定
+slow_query_log                = 1
+slow_query_log_file           = /var/log/mysql/mysql-slow.log
+long_query_time               = 5.0
+log_queries_not_using_indexes = 0
+
+# 実行ログ（全クエリ記録）は本番では無効
+general_log = 0
+
+# lower_case_table_names は datadir 初期化後に変更できないため設定しない。
+# Prisma の @@map は全て小文字なので不要（materials / types / element_symbol）。
+# bind-address と log_error は mysql.conf.d/mysqld.cnf の 127.0.0.1 /
+# /var/log/mysql/error.log をそのまま使用する。
+
+[mysqldump]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[client]
+default-character-set = utf8mb4

@@ -1,2 +1,13 @@
 .vscode
 doc/build/
+# 依存パッケージ・ビルド成果物
+node_modules/
+api/dist/
+app/dist/
+
+# 環境変数 (api/.env.example をテンプレートとして使用)
+.env
+api/.env
+
+# MySQL のログは /var/log/mysql/ に出力される (旧 Docker 構成の残骸)
+db/logs/

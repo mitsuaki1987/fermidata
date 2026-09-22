@@ -104,6 +104,10 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
+    "outDir": "dist",                                    /* Emit compiled JavaScript into ./dist (used by fermidata-api.service). */
+    "rootDir": "."
+  },
+  /* 本番ビルドの対象は API 本体のみ。prisma/seed と prisma/insert は ts-node で直接実行する。 */
+  "include": ["index.ts"]
 }

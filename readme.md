@@ -1,149 +1,220 @@
-# 実行環境セットアップマニュアル
+# fermidata 実行環境マニュアル（ネイティブ構成）
 
 ## 概要
 
-- Dockerインストール環境を使用します
-- Dockerを用いてアプリケーション実行環境をセットアップします
-- セットアップした環境にアプリケーションをデプロイします
-
-### 1. 事前準備
-
-- DB設定値の変更
-    - .env ファイルの環境変数を適宜変更してください
-    - my.cnf ファイルの設定値を適宜変更してください
-
-### 2. セットアップ実行
-
-1. docker-compose を実行します
+Docker を使わず、サーバー上のネイティブな Node.js / MySQL / Apache で動作します。
 
 ```
-docker-compose up -d
+  ブラウザ
+    │ https://ip-163-220-177-91.compute.mdx1.jp/fermidata/search/
+    ▼
+  Apache 2.4 (:443, Let's Encrypt)
+    ├─ /fermidata/search/      → /var/www/html/fermidata/search/  (Vue のビルド成果物)
+    ├─ /fermidata/search/api/  → ProxyPass 127.0.0.1:3000         (Express + Prisma)
+    └─ /fermidata/html/        → /var/www/html/fermidata/html/    (物質ごとの静的ページ)
+                                        │
+                        systemd: fermidata-api.service
+                                        │
+                        systemd: mysql.service (127.0.0.1:3306)
 ```
 
-2. Docker 環境にアクセスします
+- 検索から結果表示、個別物質のデータ表示までが `/fermidata/` 配下で完結します
+- フロントエンドは静的ファイルなので常駐プロセスは API の1本だけです
+- API と MySQL はループバック (127.0.0.1) のみで待ち受け、外部には公開されません
 
-    2-1. バックエンドAPI(api)にアクセス
+| 構成要素 | 実体 |
+|---|---|
+| Node.js | v22 LTS（NodeSource の apt リポジトリ） |
+| MySQL | 8.0（Ubuntu 標準の `mysql-server`、`systemd: mysql`） |
+| API | `api/dist/index.js`（`systemd: fermidata-api`） |
+| フロントエンド | `/var/www/html/fermidata/search/`（`app/dist` を rsync） |
+| 設定ファイルの原本 | `deploy/` ディレクトリ（下記参照） |
 
-    ```
-    docker-compose exec api bash
-    ```
+`deploy/` 以下の3ファイルが実際の設置先の原本です。編集したら設置先へコピーしてください。
 
-    * ここからはDocker環境内(apiディレクトリ直下)での操作です *
+| リポジトリ | 設置先 | 反映コマンド |
+|---|---|---|
+| `deploy/fermidb.cnf` | `/etc/mysql/conf.d/fermidb.cnf` | `sudo systemctl restart mysql` |
+| `deploy/fermidata-api.service` | `/etc/systemd/system/fermidata-api.service` | `sudo systemctl daemon-reload && sudo systemctl restart fermidata-api` |
+| `deploy/fermidata-search.conf` | `/etc/apache2/conf-available/fermidata-search.conf` | `sudo systemctl reload apache2` |
 
-    - npm をインストール(アップデート)します
+---
 
-    ```
-    npm install
-    npm update
-    ```
+# 日常の操作
 
-    - DB マイグレーションを実行します
+## フロントエンド（app）を更新する
 
-    ```
-    npx prisma migrate dev
-    ```
+```
+cd ./app
+npm run build      # app/dist を生成
+npm run deploy     # /var/www/html/fermidata/search/ へ rsync (--delete)
+```
 
-    - api サーバを起動します
+## バックエンド（api）を更新する
 
-    ```
-    npm run dev
-    ```
+```
+cd ./api
+npm run build                          # TypeScript を api/dist へコンパイル
+sudo systemctl restart fermidata-api
+```
 
-    2-2. フロントエンドアプリケーション(app)にアクセス
+## 状態確認・ログ
 
-    ```
-    docker-compose exec app bash
-    ```
+```
+systemctl status fermidata-api mysql apache2
+sudo journalctl -u fermidata-api -f        # API のログ（console.log もここに出る）
+sudo tail -f /var/log/mysql/error.log      # MySQL エラーログ
+sudo tail -f /var/log/mysql/mysql-slow.log # スロークエリ（5秒超）
+sudo tail -f /var/log/apache2/access.log   # Apache アクセスログ
+```
 
-    * ここからはDocker環境内(appディレクトリ直下)での操作です *
+いずれのサービスも `systemctl enable` 済みなので、OS 再起動後は自動で復帰します。
+API は異常終了しても systemd が5秒後に再起動します。
 
-    - npm をインストールします
+## ローカル開発（ホットリロード）
 
-    ```
-    npm install
-    npm update
-    ```
+本番の静的配信とは別に、開発用サーバーを使えます。
 
-    - app サーバを起動します
+```
+cd ./api && npm run dev     # nodemon + ts-node (127.0.0.1:3000)
+cd ./app && npm run serve   # http://<host>:8080/fermidata/search/
+```
 
-    ```
-    npm run serve
-    ```
+`app` の開発サーバーは `/fermidata/search/api` を `127.0.0.1:3000` へプロキシするので、
+本番と同じ同一オリジン構成でそのまま動作します（CORS 設定は不要です）。
 
-3. ブラウザからアクセスして起動を確認します
+---
+
+# セットアップ（新しいサーバーに構築する場合）
+
+## 1. Node.js 22 LTS
+
+```
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+## 2. MySQL
+
+```
+sudo apt-get install -y mysql-server
+sudo cp deploy/fermidb.cnf /etc/mysql/conf.d/fermidb.cnf
+sudo systemctl restart mysql
+```
+
+DB とアプリ用ユーザーを作成します（パスワードは適宜生成してください）。
+
+```
+sudo mysql -e "
+CREATE DATABASE IF NOT EXISTS materials_db CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+CREATE USER 'fermidata'@'localhost' IDENTIFIED BY '<パスワード>';
+GRANT ALL PRIVILEGES ON materials_db.* TO 'fermidata'@'localhost';"
+```
+
+> `deploy/fermidb.cnf` に `lower_case_table_names` は入れていません。MySQL 8 ではこの値を
+> データディレクトリ初期化後に変更するとサーバーが起動しなくなります。Prisma のテーブル名は
+> すべて小文字（`materials` / `types` / `element_symbol`）なので設定は不要です。
+
+## 3. API
+
+```
+cp api/.env.example api/.env
+# DATABASE_URL のパスワードを上で設定した値に書き換える
+chmod 600 api/.env
+
+cd ./api
+npm install
+npx prisma generate
+npx prisma migrate deploy      # 本番では dev ではなく deploy を使う
+npm run build
+
+sudo cp ../deploy/fermidata-api.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now fermidata-api
+```
+
+## 4. フロントエンド
+
+```
+cd ./app
+npm install
+npm run build
+mkdir -p /var/www/html/fermidata/search
+npm run deploy
+```
+
+## 5. Apache
+
+```
+sudo cp deploy/fermidata-search.conf /etc/apache2/conf-available/
+sudo a2enmod proxy proxy_http
+sudo a2enconf fermidata-search
+sudo apache2ctl configtest && sudo systemctl reload apache2
+```
+
+---
 
 # DB操作マニュアル
 
 ## 概要
 
-1. マイグレーション
-    - DB 構築と同時にレコードをセットします
+1. マイグレーション … DB 構築と同時にレコードをセットします
+2. シーディング … 既存の DB にレコードをセットします（既存のレコードは上書きされます）
+3. インサート … 既存の DB にレコードを追加します（既存のレコードは残ります）
 
-2. シーディング
-    - 既存のDB にレコードをセットします（既存のレコードは上書きされます）
+いずれも `api` ディレクトリで実行します（Docker への `exec` は不要になりました）。
 
-3. インサート
-    - 既存のDB にレコードを追加します（既存のレコードは残ります）
-
-### 1.マイグレーション
-
-1. 初回
+### 1. マイグレーション
 
 - ファイル名を「data.json」とした追加用JSONデータファイルを用意します
-- 用意したJSONデータファイルをapi ディレクトリ直下に配置します
-- api ディレクトリへ移動します
-- マイグレーション用のコマンドを実行します
-    - ※途中でマイグレーション名を付けることを求められた場合は、バージョンや日付などを適宜設定してください
+- 用意したJSONデータファイルを api ディレクトリ直下に配置します
 
-（コマンド操作例）
 ```
 cd ./api
-npx prisma migrate dev
+npx prisma migrate deploy   # 既存のマイグレーションを適用（本番）
+npx prisma migrate dev      # スキーマ変更時に新しいマイグレーションを作成（開発）
 ```
 
-2. リセット：DBスキーマ（テーブル構造やデータ型等）を変更した場合に利用
+> `npx prisma migrate dev` はシャドーデータベースの作成権限を必要とします。
+> 権限が足りない場合は次を実行してください。
+> `sudo mysql -e "GRANT CREATE, DROP, ALTER, REFERENCES ON *.* TO 'fermidata'@'localhost';"`
 
-＊既存のレコードデータを削除した上で、レコードを追加します。（IDはリセットされます）
+リセット（スキーマ変更時。既存レコードを削除してから追加。ID はリセットされます）:
 
-- ファイル名を「data.json」とした追加用JSONデータファイルを用意します
-- 用意したJSONデータファイルをapi ディレクトリ直下に配置します
-- api ディレクトリへ移動します
-- リセット用のコマンドを実行します
-
-（コマンド操作例）
 ```
 cd ./api
 npx prisma migrate reset
 ```
 
-### 2.シーディング
+### 2. シーディング
 
-＊既存のレコードデータを削除した上で、レコードを追加します。（IDはリセットされません）
+＊既存のレコードデータを削除した上で、レコードを追加します。（ID はリセットされません）
 
-- ファイル名を「data.json」とした追加用JSONデータファイルを用意します
-- 用意したJSONデータファイルをapi ディレクトリ直下に配置します
-- api ディレクトリへ移動します
-- シーディング用のコマンドを実行します
+- ファイル名を「data.json」とした追加用JSONデータファイルを api ディレクトリ直下に配置します
 
-（コマンド操作例）
 ```
 cd ./api
 npx prisma db seed
 ```
 
-### 3.インサート
+### 3. インサート
 
-＊既存のレコードデータの後に、レコードを追加します。（IDや主キーが重複するとエラーになります）
+＊既存のレコードデータの後に、レコードを追加します。（ID や主キーが重複するとエラーになります）
 
-- ファイル名を「data_insert.json」とした追加用JSONデータファイルを用意します
-- 用意したJSONデータファイルをapi ディレクトリ直下に配置します
-- api ディレクトリへ移動します
-- インサート用のコマンドを実行します
+- ファイル名を「data_insert.json」とした追加用JSONデータファイルを api ディレクトリ直下に配置します
 
-（コマンド操作例）
 ```
 cd ./api
 npx ts-node prisma/insert/start.ts
+```
+
+### バックアップとリストア
+
+```
+mysqldump -u fermidata -p --single-transaction --routines --triggers \
+  materials_db > ~/backup/materials_db_$(date +%Y%m%d).sql
+
+mysql -u fermidata -p materials_db < ~/backup/materials_db_YYYYMMDD.sql
 ```
 
 ### appendix
@@ -155,11 +226,37 @@ npx ts-node prisma/insert/start.ts
 
 2. Prisma Studio
 
-DB 内のテーブルやレコードをGUI で管理可能な付属ツールです
-コマンド操作で起動することができます(コマンド実行後に自動的にブラウザが起動します)
+DB 内のテーブルやレコードを GUI で管理できる付属ツールです。
 
-（コマンド操作例）
 ```
 cd ./api
-npx prisma studio
+npx prisma studio    # 127.0.0.1:5555
+```
+
+ポート 5555 は外部公開していないので、手元の PC から SSH ポートフォワードで接続してください。
+
+```
+ssh -L 5555:127.0.0.1:5555 <user>@ip-163-220-177-91.compute.mdx1.jp
+```
+
+---
+
+# 旧 Docker 構成について
+
+`docker-compose.yml`、`.env`、`db/conf/my.cnf` は旧構成の名残で、現在は使用していません
+（切り戻し用に残しています）。切り戻す場合:
+
+```
+sudo systemctl disable --now fermidata-api
+sudo systemctl disable --now mysql
+sudo a2disconf fermidata-search && sudo systemctl reload apache2
+docker compose up -d
+```
+
+DB のデータは Docker ボリューム `fermidata_mysqldata` に残っています。
+不要になったら次で完全に削除できます（**元に戻せません**）。
+
+```
+docker compose down -v
+docker image rm node:20 mysql:8.0.33
 ```

@@ -276,7 +276,9 @@ export default {
       if ((this.inputText.includes("#")) && (this.inputText.includes("?"))) {
         this.checkInputText();
       } else {
-        axios.get("http://ip-163-220-177-91.compute.mdx1.jp:3000/materials", {
+        // Apache が /fermidata/search/api/ を api サーバ (127.0.0.1:3000) へ転送する。
+        // BASE_URL は vue.config.js の publicPath がビルド時に埋め込まれる。
+        axios.get(process.env.BASE_URL + "api/materials", {
           params: {
             keyword: this.inputText,
             minE: this.minEform,

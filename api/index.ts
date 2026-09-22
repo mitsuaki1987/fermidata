@@ -2,16 +2,12 @@ import express, { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 import type { Prisma } from '@prisma/client';
 
-const cors = require('cors');
-
 const app = express();
-const port = 3000;
 
-// CORSでhttp://localhost:8080からのリクエストを許可
-app.use(cors({
-    origin: 'http://ip-163-220-177-91.compute.mdx1.jp:8080',
-    credentials: true
-}));
+// Apache のリバースプロキシ (/fermidata/search/api/ → ここ) 経由で同一オリジンになるため
+// CORS の設定は不要。ローカル開発時は vue.config.js の devServer.proxy が同じ役割を担う。
+const port = Number(process.env.API_PORT) || 3000;
+const host = process.env.API_HOST || '127.0.0.1';
 
 const prisma = new PrismaClient();
 
@@ -176,7 +172,7 @@ app.post('/materials', async (req: Request, res: Response) => {
     // res.send('Hello World!!!!!')
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, host, () => console.log(`fermidata api listening on ${host}:${port}`));
 
 // 検索キーワードのパース処理(#記号)
 // 与えられた組成式をパースして元素記号と元素数に分解し、オブジェクトとして返す関数
