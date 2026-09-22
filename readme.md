@@ -37,6 +37,7 @@ Docker を使わず、サーバー上のネイティブな Node.js / MySQL / Apa
 | `deploy/fermidb.cnf` | `/etc/mysql/conf.d/fermidb.cnf` | `sudo systemctl restart mysql` |
 | `deploy/fermidata-api.service` | `/etc/systemd/system/fermidata-api.service` | `sudo systemctl daemon-reload && sudo systemctl restart fermidata-api` |
 | `deploy/fermidata-search.conf` | `/etc/apache2/conf-available/fermidata-search.conf` | `sudo systemctl reload apache2` |
+| `deploy/fermidata-private.conf` | `/etc/apache2/conf-available/fermidata-private.conf` | `sudo systemctl reload apache2` |
 
 ---
 
@@ -157,10 +158,17 @@ npm run deploy
 
 ```
 sudo cp deploy/fermidata-search.conf /etc/apache2/conf-available/
+sudo cp deploy/fermidata-private.conf /etc/apache2/conf-available/
 sudo a2enmod proxy proxy_http
 sudo a2enconf fermidata-search
+sudo a2enconf fermidata-private
 sudo apache2ctl configtest && sudo systemctl reload apache2
 ```
+
+`fermidata-private.conf` は、この作業ツリーが公開ディレクトリ
+`/var/www/html/fermidata/` そのものであることへの対策です。`.git/` や `api/` `app/`
+`deploy/` `doc/` `readme.md`、ドットで始まるファイルを Apache 側で拒否します。
+**ソースやツールのディレクトリを新しく追加したら、このファイルにも追記してください。**
 
 ---
 

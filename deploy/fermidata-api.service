@@ -1,6 +1,6 @@
 [Unit]
 Description=fermidata API (Express + Prisma)
-Documentation=file:///home/mdxuser/program/fermidata/readme.md
+Documentation=file:///var/www/html/fermidata/readme.md
 After=network-online.target mysql.service
 Wants=network-online.target
 Requires=mysql.service
@@ -9,9 +9,9 @@ Requires=mysql.service
 Type=simple
 User=mdxuser
 Group=mdxuser
-WorkingDirectory=/home/mdxuser/program/fermidata/api
+WorkingDirectory=/var/www/html/fermidata/api
 Environment=NODE_ENV=production
-EnvironmentFile=/home/mdxuser/program/fermidata/api/.env
+EnvironmentFile=/var/www/html/fermidata/api/.env
 ExecStart=/usr/bin/node dist/index.js
 Restart=always
 RestartSec=5
@@ -22,7 +22,7 @@ NoNewPrivileges=yes
 PrivateTmp=yes
 ProtectSystem=full
 ProtectHome=read-only
-ReadWritePaths=/home/mdxuser/program/fermidata/api
+ReadWritePaths=/var/www/html/fermidata/api
 
 [Install]
 WantedBy=multi-user.target
