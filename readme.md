@@ -243,20 +243,9 @@ ssh -L 5555:127.0.0.1:5555 <user>@ip-163-220-177-91.compute.mdx1.jp
 
 # 旧 Docker 構成について
 
-`docker-compose.yml`、`.env`、`db/conf/my.cnf` は旧構成の名残で、現在は使用していません
-（切り戻し用に残しています）。切り戻す場合:
+以前は `docker-compose.yml` で app / api / db の3コンテナを動かしていましたが、
+ネイティブ構成への移行完了に伴い、コンテナ・ボリューム (`fermidata_mysqldata`)・
+`docker-compose.yml`・`db/`（旧 my.cnf とログ）はすべて削除しました。
+MySQL の設定は `deploy/fermidb.cnf` に引き継がれています。
 
-```
-sudo systemctl disable --now fermidata-api
-sudo systemctl disable --now mysql
-sudo a2disconf fermidata-search && sudo systemctl reload apache2
-docker compose up -d
-```
-
-DB のデータは Docker ボリューム `fermidata_mysqldata` に残っています。
-不要になったら次で完全に削除できます（**元に戻せません**）。
-
-```
-docker compose down -v
-docker image rm node:20 mysql:8.0.33
-```
+移行前のデータは `~/backup/materials_db_20260922.sql` にダンプとして保管しています。
